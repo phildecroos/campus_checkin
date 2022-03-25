@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Campus Check-In</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="icon.png">
+</head>
+<body   class="org_default">
+<div id="site" class="page uw-site">
+<header id="header" class="uw-header--global">
+<div id="uw-header" class="uw-header">
+<a href="https://uwaterloo.ca"><img src="logo.svg" alt="University of Waterloo Crest"></a>
+</div>
+</header>
+            <div class="uw-site--cbar">
+                <div class="uw-site--c1 uw-cbar"></div>
+                <div class="uw-site--c2 uw-cbar"></div>
+                <div class="uw-site--c3 uw-cbar"></div>
+                <div class="uw-site--c4 uw-cbar"></div>
+            </div>
+   <div id="main" class="uw-site--main" role="main">
+        <div class="uw-section--inner">
+<h1 id="date"></h1>
+<script>
+    let date = new Date()
+    let text = ""
+    if (date.getDate() < 10) {
+        text = date.getFullYear() + "-" + (date.getMonth()+1) + "-0" + date.getDate()
+    }
+    else {
+        text = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate()
+    }
+    document.getElementById("date").innerHTML = text
+</script>
+<p><img src="check.png" alt="" /></p>
+<p>Thank you for completing the COVID-19 screening for businesses and organizations. You may visit the campus today.<br /><br />This screening must be completed each day you plan to visit campus.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
